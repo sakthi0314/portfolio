@@ -1,0 +1,10 @@
+$primary: hsl(254, 62%, 8%);
+$secondary: hsl(266, 100%, 50%);
+$light: hsl(254, 35%, 14%);
+
+$text-primary: hsl(243, 21%, 79%);
+$white: hsl(0, 0%, 100%);
+
+// gradiants
+$gradiant: linear-gradient(to right, lighten($secondary, 20%), $secondary);
+$gradiant-main: linear-gradient(to bottom right, #b831be, #8529e4);

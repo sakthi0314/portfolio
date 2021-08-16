@@ -1,0 +1,56 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+@import "../../styles/colors";
+
+.projects {
+  position: relative;
+  padding: 0 2rem;
+  margin: 10rem 0;
+
+  &__donut {
+    position: absolute;
+    z-index: -10;
+    bottom: -10%;
+    width: 20rem;
+    right: 0;
+    animation: shapeAnime 3s linear infinite alternate;
+
+    @include for-tablet-portrait-up {
+      width: 14rem;
+      bottom: -5%;
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    z-index: -10;
+    width: 20rem;
+    animation: shapeAnime 3s linear infinite alternate;
+
+    @include for-tablet-portrait-up {
+      width: 14rem;
+    }
+  }
+
+  &__splash {
+    position: absolute;
+    width: 80rem;
+    left: -35%;
+    top: -20%;
+    z-index: -10;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 5em;
+
+    h1 {
+      font-size: 5rem;
+      font-weight: map-get($font-weight, bold);
+
+      @include for-phone-only {
+        font-size: 4rem;
+      }
+    }
+  }
+}

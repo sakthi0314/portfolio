@@ -1,0 +1,28 @@
+@import "./colors";
+@import "./variables";
+
+.primary {
+  padding: 0.88em 3em;
+  border-radius: 40px;
+  background-color: darken($primary, 1%);
+  border: 2px solid $secondary;
+  color: $white;
+  border-radius: 4rem;
+  font-weight: map-get($font-weight, semi-bold);
+  font-size: 1.4rem;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: darken($primary, 3%);
+    transform: scale(1.06);
+    box-shadow: 0 0 10px $secondary;
+  }
+}
+
+.secondary {
+  padding: 1rem 2rem;
+  border-radius: 0.41rem;
+  background: $gradiant-main;
+  font-weight: map-get($font-weight, semi-bold);
+  color: $white;
+}

@@ -1,0 +1,46 @@
+@import "../../styles/colors";
+@import "../../styles/mixins";
+@import "../../styles/variables";
+@import "../../styles/animation";
+
+.skills {
+  position: relative;
+  padding: 0 2em;
+  margin: 2rem 0;
+
+  &__splash {
+    position: absolute;
+    right: -60%;
+    top: -100%;
+    z-index: -1;
+
+    @include for-tablet-portrait-up {
+      right: -160%;
+      top: -40%;
+    }
+  }
+
+  .container {
+    @include flexbox(column, center, center);
+  }
+
+  &__header {
+    margin-bottom: 3rem;
+
+    h1 {
+      font-size: 5rem;
+      font-weight: map-get($font-weight, bold);
+
+      @include for-phone-only {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  &__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-gap: 4em;
+  }
+}

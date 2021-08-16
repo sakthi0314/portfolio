@@ -1,0 +1,112 @@
+@import "../../styles/colors";
+@import "../../styles/mixins";
+@import "../../styles/variables";
+@import "../../styles/animation";
+
+.contact {
+  padding: 0 2em;
+  margin: 15rem 0;
+  position: relative;
+
+  &__spash {
+    position: absolute;
+    left: -20%;
+    width: 70rem;
+    bottom: -10%;
+    z-index: -10;
+  }
+
+  &__donut {
+    position: absolute;
+    width: 24rem;
+    bottom: -10%;
+    left: 0;
+    animation: shapeAnime 2s linear infinite alternate;
+    z-index: -10;
+
+    @include for-tablet-portrait-up {
+      width: 18rem;
+    }
+  }
+
+  &__text {
+    margin-bottom: 4rem;
+
+    h1 {
+      font-size: 5rem;
+      max-width: 36rem;
+      width: 100%;
+      font-weight: map=get($font-weight, bold);
+
+      @include for-phone-only {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  &__form {
+    .form {
+      background-color: darken($primary, 1%);
+      padding: 3rem;
+      border-radius: 4rem;
+      border: 2px solid $secondary;
+
+      &__wrapper {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+        &:nth-child(3) {
+          min-height: 18rem;
+
+          textarea {
+            display: grid;
+            place-items: center;
+          }
+        }
+
+        &--box {
+          position: relative;
+          width: 100%;
+          display: flex;
+
+          input,
+          textarea {
+            max-width: 100%;
+            flex: 1;
+            padding: 2rem;
+            border-radius: 4rem;
+            background-color: $light;
+            margin: 1rem;
+            color: $white !important;
+            transition: all 0.2s ease-in-out;
+
+            &:focus {
+              background-color: lighten($light, 4%);
+            }
+
+            &::placeholder {
+              color: $text-primary;
+            }
+          }
+        }
+
+        &--btn {
+          margin-left: 1rem;
+          margin-top: 2rem;
+
+          button {
+            padding: 1.5rem 6rem;
+            font-size: 1.5rem;
+          }
+
+          @include for-tablet-portrait-up {
+            button {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

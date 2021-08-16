@@ -1,0 +1,40 @@
+@import "../../styles/colors";
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.skill {
+  @include flexbox(column, center, center);
+
+  &__tooltip {
+    font-size: 1.4rem;
+    background-color: darken($primary, 2%);
+    border: 2px solid $secondary;
+    padding: 0.6rem 1.4rem;
+    border-radius: 4rem;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  &__icon {
+    height: 10rem;
+    width: 10rem;
+    background-color: darken($primary, 2%);
+    border: 2px solid $secondary;
+    border-radius: 1rem;
+    display: grid;
+    place-items: center;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 10px $secondary;
+    }
+
+    ion-icon {
+      font-size: 6rem;
+    }
+  }
+}
+
+.skill__icon:hover .skill__tooltip {
+  pointer-events: auto;
+  opacity: 1;
+}

@@ -1,0 +1,111 @@
+@import "../../styles/mixins";
+@import "../../styles/colors";
+@import "../../styles/variables";
+@import "../../styles/animation";
+
+.hero {
+  margin-top: 10em;
+  padding: 0 2em;
+  position: relative;
+
+  .container {
+    min-height: 60vh;
+    @include flexbox(column, center, flex-start);
+
+    @include for-phone-only {
+      min-height: 80vh;
+    }
+  }
+
+  &__title {
+    max-width: 70rem;
+    width: 100%;
+    cursor: pointer;
+
+    h1 {
+      font-size: 8rem;
+      font-weight: map-get($font-weight, bold);
+
+      @include for-tablet-portrait-up {
+        font-size: 6rem;
+      }
+
+      @include for-phone-only {
+        font-size: 4rem;
+      }
+
+      span {
+        color: $secondary;
+        transition: all 0.2s ease-in-out;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          height: 4px;
+          width: 70%;
+          background-color: $secondary;
+          bottom: 0;
+          left: 0;
+          border-radius: 1rem;
+          box-shadow: 0 0 6px $secondary;
+          transition: all 0.2s ease-in-out;
+        }
+
+        &:hover::after {
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  &__dec {
+    color: $text-primary;
+    font-size: 2rem;
+    font-weight: map-get($font-weight, medium);
+    margin: 1em 0;
+  }
+
+  &__cta {
+    button {
+      &::after {
+        content: "contact me";
+        transition: all 0.4s ease-in-out;
+      }
+
+      &:hover::after {
+        content: "sakthivelselvam2001@gmail.com";
+      }
+    }
+  }
+
+  &__circle--one {
+    width: 24rem;
+    position: absolute;
+    right: 1%;
+    top: 20%;
+    z-index: -1;
+    animation: shapeAnime 2s linear infinite alternate;
+    cursor: pointer;
+
+    @include for-tablet-portrait-up {
+      width: 14rem;
+      left: 4%;
+      top: 0%;
+    }
+  }
+
+  &__circle--two {
+    width: 20rem;
+    position: absolute;
+    right: 34%;
+    z-index: -1;
+    animation: shapeAnime 1s linear infinite alternate;
+
+    @include for-tablet-portrait-up {
+      width: 12rem;
+      bottom: 0;
+      right: 4%;
+    }
+  }
+}

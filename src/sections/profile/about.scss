@@ -1,0 +1,140 @@
+@import "../../styles/variables";
+@import "../../styles/colors";
+@import "../../styles/mixins";
+@import "../../styles/animation";
+
+.about {
+  position: relative;
+  margin: 40em 0 20rem 0;
+  padding: 0 2em;
+
+  &__splash {
+    position: absolute;
+    left: -20%;
+    top: -14%;
+    width: 70rem;
+
+    @include for-tablet-portrait-up {
+      left: -70%;
+    }
+  }
+
+  &__circle {
+    width: 20rem;
+    position: absolute;
+    z-index: 6;
+    top: -24%;
+    animation: shapeAnime 3s linear infinite alternate;
+
+    @include for-tablet-portrait-up {
+      width: 14rem;
+      bottom: 0;
+      z-index: 1;
+      top: -6%;
+    }
+  }
+  &__donut {
+    width: 20rem;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    animation: shapeAnime 4s linear infinite alternate;
+
+    @include for-tablet-portrait-up {
+      width: 12rem;
+      bottom: 0;
+      z-index: 1;
+    }
+  }
+
+  @include for-tablet-portrait-up {
+    margin: 10rem 0;
+  }
+
+  .container {
+    @include flexbox(row, space-between, center);
+
+    @include for-tablet-portrait-up {
+      @include flexbox(column, center, center);
+    }
+  }
+
+  &__profile {
+    @include for-tablet-portrait-up {
+      margin-bottom: 4rem;
+    }
+
+    &--img {
+      position: relative;
+      max-width: 36rem;
+      position: relative;
+      border-radius: 4rem;
+      transform: rotate(5deg);
+
+      @include for-phone-only {
+        width: 90%;
+        transform: translateX(5%);
+      }
+
+      img {
+        border-radius: 4rem;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: $gradiant-main;
+        border-radius: 4rem;
+        z-index: -10;
+        transform: rotate(-10deg);
+      }
+    }
+  }
+
+  &__content {
+    &--title {
+      font-size: 6rem;
+      font-weight: map-get($font-weight, bold);
+      margin-bottom: 1rem;
+
+      @include for-phone-only {
+        font-size: 4rem;
+      }
+    }
+    &--desc {
+      font-size: 2rem;
+      max-width: 60rem;
+      color: $text-primary;
+      font-weight: map-get($font-weight, medium);
+      margin-bottom: 3rem;
+      line-height: 1.5;
+
+      span {
+        color: $secondary;
+        transition: all 0.2s ease-in-out;
+        position: relative;
+        font-weight: map-get($font-weight, semi-bold);
+        cursor: pointer;
+
+        &::after {
+          content: "";
+          position: absolute;
+          height: 4px;
+          width: 50%;
+          background-color: $secondary;
+          bottom: -10%;
+          left: 0;
+          border-radius: 1rem;
+          box-shadow: 0 0 6px $secondary;
+          transition: all 0.2s ease-in-out;
+        }
+
+        &:hover::after {
+          width: 80%;
+        }
+      }
+    }
+  }
+}

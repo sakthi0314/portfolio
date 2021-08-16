@@ -1,0 +1,30 @@
+@mixin flexbox($direction, $justify, $align) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}

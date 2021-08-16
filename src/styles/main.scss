@@ -1,0 +1,84 @@
+@import "../../node_modules/sal.js/dist/sal.css";
+@import "../assets/fonts/fonts";
+@import "./colors";
+@import "./utilities";
+@import "./button";
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: $primary;
+  color: $white;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  border: none;
+
+  &:active,
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
+
+button {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+  font-family: inherit;
+
+  &:active,
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $gradiant;
+  opacity: 0.5;
+  border-radius: 1rem;
+  transition: all 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $gradiant;
+  opacity: 1;
+}
