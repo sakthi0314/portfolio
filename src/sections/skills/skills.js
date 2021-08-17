@@ -22,13 +22,7 @@ function Skills() {
           <h1>Proficient skills</h1>
         </div>
 
-        <ul
-          className="skills__list"
-          data-sal="slide-up"
-          data-sal-duration="1200"
-          data-sal-delay="200"
-          data-sel-easinng="ease-out-bounce"
-        >
+        <ul className="skills__list">
           {skills.map((skill) => (
             <Skill
               key={skill.id}
