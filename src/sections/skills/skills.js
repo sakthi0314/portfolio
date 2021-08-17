@@ -26,7 +26,7 @@ function Skills() {
           className="skills__list"
           data-sal="slide-up"
           data-sal-duration="1200"
-          data-sal-delay="300"
+          data-sal-delay="200"
           data-sel-easinng="ease-out-bounce"
         >
           {skills.map((skill) => (
