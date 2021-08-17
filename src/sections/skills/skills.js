@@ -6,7 +6,7 @@ import "./skills.scss";
 
 function Skills() {
   return (
-    <section className="skills">
+    <section className="skills" id="skills">
       <div className="skills__splash">
         <img src={splash} alt="splash" />
       </div>

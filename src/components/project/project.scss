@@ -1,7 +1,6 @@
 @import "../../styles/colors";
 @import "../../styles/mixins";
 @import "../../styles/variables";
-@import "../../styles/variables";
 
 .project {
   @include flexbox(row, space-between, center);
@@ -84,6 +83,33 @@
 
       &:not(:last-child) {
         margin-right: 3rem;
+      }
+    }
+  }
+
+  &__view {
+    margin-bottom: 3rem;
+
+    a {
+      border-radius: 0.2rem;
+      font-size: 1.5rem;
+      font-weight: map-get($font-weight, medium);
+      color: $white;
+
+      &:hover {
+        text-shadow: 0 0 10px $secondary;
+      }
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+
+      ion-icon {
+        font-size: 1.5rem;
+        margin-left: 8px;
+        margin-top: -6px;
+        color: $white;
+        font-size: 1.6rem;
       }
     }
   }

@@ -20,6 +20,17 @@ function Project({ img, content, dir }) {
           ))}
         </ul>
 
+        <div className="project__view">
+          <a href={content.repo} target="_blank">
+            Repo
+            <ion-icon name="git-branch-outline"></ion-icon>
+          </a>
+          <a href={content.live} target="_blank">
+            View
+            <ion-icon name="open-outline"></ion-icon>
+          </a>
+        </div>
+
         <ul className="project__techs">
           {content.techs.map((tech) => (
             <li>{tech}</li>

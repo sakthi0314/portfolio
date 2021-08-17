@@ -11,7 +11,7 @@ import "./projects.scss";
 
 function Projects() {
   return (
-    <div className="projects">
+    <div className="projects" id="projects">
       <div
         className="projects__splash"
         data-sal="slide-up"

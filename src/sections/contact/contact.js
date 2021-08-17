@@ -14,7 +14,6 @@ function Contact() {
   const subjectRef = useRef();
   const messageRef = useRef();
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -39,7 +38,6 @@ function Contact() {
         .add(creds)
         .then(() => {
           setLoading(false);
-          setError("");
           const notify = () =>
             toast.dark("Thank you contact me, As soon I will catch you", {
               style: {
@@ -67,7 +65,7 @@ function Contact() {
   }
 
   return (
-    <div className="contact">
+    <div id="contact" className="contact">
       <div
         className="contact__spash"
         data-sal="slide-up"

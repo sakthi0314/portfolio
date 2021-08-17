@@ -7,7 +7,7 @@ import "./about.scss";
 
 function About() {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <div
         className="about__splash"
         data-sal="slide-up"
@@ -76,7 +76,11 @@ function About() {
             data-sal-delay="200"
             data-sel-easinng="ease-out-bounce"
           >
-            <button className="primary">Hire me</button>
+            <button className="primary">
+              <a href="#contact" style={{ color: "currentcolor" }}>
+                Hire me
+              </a>
+            </button>
           </div>
         </div>
       </div>

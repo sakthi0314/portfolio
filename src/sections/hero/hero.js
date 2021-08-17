@@ -2,19 +2,27 @@ import React, { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import circle from "../../assets/images/circle.png";
 import donut from "../../assets/images/donut.png";
+import { toast } from "react-toastify";
+import Notification from "../../components/notification/notification";
 import "./hero.scss";
 
 function Hero() {
   const mail = "sakthivelselvam2001@gmail.com";
   const [copied, seCopied] = useState(false);
 
-  function copyToClipBoard() {
+  function copy() {
     seCopied(true);
+    toast.dark("Copied to clipboard", {
+      style: {
+        fontSize: 16,
+      },
+    });
   }
 
   return (
     <section className="hero">
       <div className="container">
+        <Notification />
         <div
           className="hero__title"
           data-sal="slide-up"
@@ -35,7 +43,7 @@ function Hero() {
         >
           <p>Frontend React Js Developer</p>
         </div>
-        <CopyToClipboard text={mail} onCopy={copyToClipBoard}>
+        <CopyToClipboard text={mail} onCopy={copy}>
           <div
             className="hero__cta"
             data-sal="slide-up"
@@ -43,7 +51,7 @@ function Hero() {
             data-sal-delay="200"
             data-sel-easinng="ease-out-bounce"
           >
-            <button onClick={copyToClipBoard} className="primary"></button>
+            <button className="primary"></button>
           </div>
         </CopyToClipboard>
       </div>

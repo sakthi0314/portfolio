@@ -32,8 +32,8 @@ export const skills = [
   {
     id: 6,
     name: "git",
-    icon: "git-branch-outline",
-    color: "hsl(10, 87%, 56%)",
+    icon: "logo-github",
+    color: "hsl(0, 0%, 100%)",
   },
   {
     id: 7,
