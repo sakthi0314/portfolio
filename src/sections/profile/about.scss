@@ -10,9 +10,8 @@
 
   &__splash {
     position: absolute;
-    left: -20%;
+    left: -50%;
     top: -14%;
-    width: 70rem;
 
     @include for-tablet-portrait-up {
       left: -70%;

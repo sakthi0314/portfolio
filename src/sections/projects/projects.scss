@@ -34,10 +34,13 @@
 
   &__splash {
     position: absolute;
-    width: 80rem;
-    left: -35%;
+    left: -55%;
     top: -20%;
     z-index: -10;
+
+    @include for-tablet-portrait-up {
+      display: none;
+    }
   }
 
   &__header {

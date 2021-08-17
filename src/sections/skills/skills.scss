@@ -11,12 +11,11 @@
   &__splash {
     position: absolute;
     right: -60%;
-    top: -100%;
     z-index: -1;
+    top: -100%;
 
     @include for-tablet-portrait-up {
-      right: -160%;
-      top: -40%;
+      display: none;
     }
   }
 
