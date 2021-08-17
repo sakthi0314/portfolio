@@ -21,7 +21,7 @@ const frontendmentor = {
 const covidTracker = {
   title: "Covid Tracker",
   description:
-    "Provide Real world Covid cases. Exlpore all over world cases in map's and Sorting ny Courtries",
+    "Provide Real world Covid cases. Exlpore all over world cases in map's and Sorting by Courtries",
   features: ["Map", "Chart"],
   techs: ["Authentication", "React"],
   repo: "https://github.com/sakthi0314/covid-19-Tracker",
