@@ -21,11 +21,11 @@ function Project({ img, content, dir }) {
         </ul>
 
         <div className="project__view">
-          <a href={content.repo} target="_blank">
+          <a href={content.repo} rel="noreferrer" target="_blank">
             Repo
             <ion-icon name="git-branch-outline"></ion-icon>
           </a>
-          <a href={content.live} target="_blank">
+          <a href={content.live} rel="noreferrer" target="_blank">
             View
             <ion-icon name="open-outline"></ion-icon>
           </a>

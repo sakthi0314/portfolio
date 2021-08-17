@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import splash from "../../assets/images/spash-one.svg";
+import logo from "../../assets/images/logo.svg";
 import "./navbar.scss";
 
 function Navbar() {
@@ -37,9 +38,7 @@ function Navbar() {
         >
           <div className="container">
             <div className="navbar__logo">
-              <a href="#">
-                {"<sakthi"} <span>{"/>"}</span>
-              </a>
+              <img src={logo} alt="" />
             </div>
             <div
               className={`navbar__humberger ${toogleMenu && "menuGlow"}`}
@@ -55,16 +54,24 @@ function Navbar() {
               onClick={handleToogleMenu}
             >
               <li>
-                <a href="#about">About</a>
+                <a rel="noreferrer" href="#about">
+                  About
+                </a>
               </li>
               <li>
-                <a href="#projects">Projects</a>
+                <a rel="noreferrer" href="#projects">
+                  Projects
+                </a>
               </li>
               <li>
-                <a href="#skills">Skills</a>
+                <a rel="noreferrer" href="#skills">
+                  Skills
+                </a>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <a rel="noreferrer" href="#contact">
+                  Contact
+                </a>
               </li>
 
               <li>
@@ -74,26 +81,43 @@ function Navbar() {
 
             <ul className="navbar__list">
               <li>
-                <a href="#about">About</a>
+                <a rel="noreferrer" href="#about">
+                  About
+                </a>
               </li>
               <li>
-                <a href="#projects">Projects</a>
+                <a rel="noreferrer" href="#projects">
+                  Projects
+                </a>
               </li>
               <li>
-                <a href="#skills">Skills</a>
+                <a rel="noreferrer" href="#skills">
+                  Skills
+                </a>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <a rel="noreferrer" href="#contact">
+                  Contact
+                </a>
               </li>
-              <li>
-                <button className="primary">Resume</button>
-              </li>
+              <div>
+                <button className="primary">
+                  <a
+                    rel="noreferrer"
+                    href="https://drive.google.com/file/d/1ElBVVp0XQ7BJPaGevyB319ZYuTEHuEek/view?usp=drivesdk"
+                    target="_blank"
+                    style={{ color: "currentcolor" }}
+                  >
+                    Resume
+                  </a>
+                </button>
+              </div>
             </ul>
           </div>
         </nav>
       </header>
       <div className="header__splash">
-        <img src={splash} />
+        <img src={splash} alt="splash" />
       </div>
     </>
   );

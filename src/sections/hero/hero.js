@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import circle from "../../assets/images/circle.png";
 import donut from "../../assets/images/donut.png";
@@ -8,10 +8,8 @@ import "./hero.scss";
 
 function Hero() {
   const mail = "sakthivelselvam2001@gmail.com";
-  const [copied, seCopied] = useState(false);
 
   function copy() {
-    seCopied(true);
     toast.dark("Copied to clipboard", {
       style: {
         fontSize: 16,
