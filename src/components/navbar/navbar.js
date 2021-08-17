@@ -37,9 +37,9 @@ function Navbar() {
           data-sel-easinng="ease-out-bounce"
         >
           <div className="container">
-            <div className="navbar__logo">
+            <a href="#hero" rel="noreferrer" className="navbar__logo">
               <img src={logo} alt="" />
-            </div>
+            </a>
             <div
               className={`navbar__humberger ${toogleMenu && "menuGlow"}`}
               onClick={handleToogleMenu}
